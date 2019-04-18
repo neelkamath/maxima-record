@@ -1,15 +1,16 @@
 M(x, y) := 4*x*y;
-N(x, y) := x^4;
-wxdraw2d(xrange = [0, 1], yrange=[0, 1], 
-    fill_color = green, filled_func = true, 
-    filled_func = 1, explicit(x^4, x, 0, 1), 
-    filled_func = false, color = yellow, 
-    explicit(1, x, -1, 1), color = red, 
-    explicit(x^4, x, -1, 1));
-integrate(integrate(diff(N(x, y), x) - diff(M(x, y), y), 
-    y, x^4, 1), x, 0, 1);
-a: integrate((M(x, x^4) + N(x, x^4)*diff(x^4, x)), x, 0, 
-    1);
+N(x, y) := x^3;
+wxdraw2d(xrange = [0, 1], yrange = [0, 1], 
+    fill_color = green, 
+    filled_func = true, 
+    filled_func = 1, 
+    explicit(x^2, x, 0, 1), 
+    filled_func = false,     
+    color = yellow, explicit(1, x, -1, 1), 
+    color = red, explicit(x^2, x, -1, 1));
+integrate(integrate(diff(N(x, y), x) 
+    - diff(M(x, y), y), y, x^2, 1), x, 0, 1);
+a: integrate((M(x, x^2) + N(x, x^2)*diff(x^2, x)), x, 0, 1);
 b: integrate((M(x, 1) + N(x, 1)*diff(1, x)), x, 1, 0);
 c: integrate((M(0, y)*diff(0, x) + N(0, y)), y, 1, 0);
 a + b + c;

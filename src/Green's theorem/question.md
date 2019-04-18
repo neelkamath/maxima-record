@@ -1,1 +1,1 @@
-Verify Green's theorem for the (4xy)dx + (x^4)dy over the  region y = x^2, y = 1 and x = 0.
+Verify Green's theorem for the (4xy)dx + (x^3)dy over the region y = x^2, y = 1 and x = 0.
