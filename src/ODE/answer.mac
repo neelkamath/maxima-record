@@ -1,0 +1,6 @@
+ode: 'diff(y(t), t, 2) + 10*'diff(y(t), t) + 4*y(t) = t;
+atvalue(y(t), t = 0, 0);
+atvalue('diff(y(t), t), t = 0, 0);
+lap-ode: laplace(ode, t, s);
+sol: solve(%, 'laplace(y(t), t, s));
+map(lambda([eq], ilt(eq, s, t)), sol);

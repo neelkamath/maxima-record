@@ -1,0 +1,20 @@
+load(vect); 
+%phi(x, y, z) := x^2 + y^2 + z^2 - 6; 
+%psi(x, y, z) := x^2 + y^2 - 4 - z; 
+scalefactors([x, y, z]); 
+gdf1(x, y, z) := grad(%phi(x, y, z)); 
+ev(express(gdf1(x, y, z)), diff); 
+define(gdf1(x, y, z), %); 
+gdf2(x, y, z) := grad(%psi(x, y, z)); 
+ev(express(gdf2(x, y, z)), diff); 
+define(gdf2(x, y, z), %); 
+mag_u: sqrt(gdf1(2, 3, 4).gdf1(2, 3, 4)); 
+mag_v: sqrt(gdf2(2, 3, 4).gdf2(2, 3, 4)); 
+theta: acos(gdf1(2, 3, 4).gdf2(2, 3, 4)/(mag_u * mag_v)); 
+load(draw); 
+gimp: implicit(6 = x^2 + y^2 + z^2, x, -4, 4, y, -4, 4, z, 
+    -4, 4); 
+gexp: implicit(x^2 + y^2 - z = 4, x, -4, 4, y, -4, 4, z, 
+    -4, 4); 
+draw3d(proportional_axes = xyz, xyplane = 0, color = red, 
+    gexp, color = blue, gimp)$

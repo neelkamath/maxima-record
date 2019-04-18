@@ -1,0 +1,19 @@
+draw3d(enhanced3d = true, triangle([2, 4, 5], [3, 6, 9], 
+    [4, 8, 12]));
+load(vect);
+F(x, y, z) := [z^2, y^2, x*y];
+scalefactors([x, y, z]);
+curl(F(x, y, z));
+C: ev(express(%), diff);
+gdf: grad(2*x + 2*y+z);
+ev(express(%), diff);
+define(gdf(x, y, z), %);
+N: gdf(x, y, z)/sqrt(gdf(x, y, z).gdf(x, y, z));
+I: C.N;
+K: [0, 0, 1];
+J: N.K;
+I/J;
+ratsimp(%);
+subst(2 - 2*x - 2*y, z, %);
+ratsimp(%);
+integrate(integrate(%, y, 0, 1 - x), x, 0, 1);

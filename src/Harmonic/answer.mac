@@ -1,0 +1,11 @@
+makelist(k, k, 5, 10);
+makelist(%pi*k/3, k, 5, 10);
+y: append([9, 18, 24, 28, 26, 20]);
+sumy: apply("+", %);
+y1: makelist(cos(%pi*k/3), k, 5, 10);
+sumy1: apply("+", y1*y);
+z1: makelist(sin(%pi*k/3), k, 5, 10);
+sumz1: apply("+", z1*y);
+a0: float(2*sumy/6);
+a1: float(2*sumy1/6);
+b1: float(2*sumz1/6);

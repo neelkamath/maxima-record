@@ -1,0 +1,1 @@
+Show that <4(y^4)(z^2), 3(x^3)(z^2), 4(x^2)(y^2)> is solenoidal.
