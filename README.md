@@ -12,8 +12,9 @@ This is my second semester's Mathematics lab record for undergrad.
 # Usage
 
 1. `wxmaxima`
-1. In the wxMaxima window, click `File > Open...` and select the relevant `.mac` file from any of the folders in the the `maxima-record/src` directory.
-1. Click `Cell > Evaluate Cell(s)` to get the desired output.
+1. In the wxMaxima window, click `File > Open...`.
+1. Select the relevant `.mac` file from one of the folders in the `maxima-record/src` directory.
+1. Click `Cell > Evaluate Cell(s)`.
 
 # Documentation
 
