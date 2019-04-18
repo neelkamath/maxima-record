@@ -1,0 +1,8 @@
+[beta(2, 4), beta(2, 1/4), beta(2, a)];
+
+kill(all);
+map('gamma, [3, 6, 9, 12, 15, 18]);
+
+kill(all);
+besselexpand: true$ 
+bessel_j(3/2, x);

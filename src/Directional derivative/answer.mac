@@ -1,0 +1,8 @@
+load(vect);
+%phi(x, y, z) := x^(2).y^(3).z^(4);
+a: [4, -5, 7];
+scalefactors([x, y, z]);
+g: grad(%phi(x, y, z));
+ev(express(g), diff);
+define(g(x, y, z), %);
+(g(1, 2, 3).a)/sqrt(a.a);

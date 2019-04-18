@@ -1,0 +1,1 @@
+Solve the differential equation y''(t) + 10y'(t) + 4y(t) = t, y(0) = 0, y'(0) = 0.

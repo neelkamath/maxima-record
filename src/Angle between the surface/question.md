@@ -1,0 +1,1 @@
+Find the angle between the surfaces x^2 + y^2 + z^2 = 6, z = x^2 + y^2 - 4 at the point (2, 3, 4).

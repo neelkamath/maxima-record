@@ -1,0 +1,15 @@
+load(fourie);
+(declare(n, integer), assume(n > 0), facts());
+l: fourier(x + x^5, x, %pi);
+fourexpand(l, x, %pi, 6);
+fs(nmax) := fourexpand(l, x, %pi, 6);
+load(draw);
+wxdraw2d(grid = true, xrange = [-π, π], yrange = [-π, π], 
+    color = red, line_width = 2, 
+    explicit(x + x^5, x, -π, π), color = blue, 
+    line_width = 2, explicit(fs(3), x, -π, π));
+
+kill(all);
+load(fourie);
+s: foursin(x^7, x, %pi);
+fourexpand(s, x, %pi, 6);

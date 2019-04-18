@@ -1,0 +1,1 @@
+Find the directional derivative of the function psi = (x^2)(y^3)(z^4) at the point (1, 2, 3) in the direction of the vector <4, -5, 7>.

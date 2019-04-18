@@ -1,0 +1,10 @@
+laplace(%e^(3*t)*cos(4*t), t, s);  
+
+kill(all);
+ilt((s/(s^2 + 3^2)^2), s, t);
+
+kill(all);
+F: s/(s^2 + 4^2);
+G: 1/(s^2 + 8^2);
+ilt(F*G, s, t);
+ratsimp(%);
